@@ -22,7 +22,7 @@ else
 	echo "check php handler manually"
 fi
 
-echo `grep -i kill /var/log/messages`
+echo `grep -i 'kill\|oom' /var/log/messages`
 
 for file in `ls -tr /var/log/sa/sa*| grep -v sar`
 do
