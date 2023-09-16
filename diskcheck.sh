@@ -2,15 +2,15 @@
 
 alias diskover="df -a -T -h -t ext4"
 alias  diskbreakdown="du -shc / 2>&1 | grep -v  '^du:' | grep G"
-alias 50Mfileshome="find /home -type f -size +50M -exec ls -lah {} + | awk {'print $9," - ", $5'}"
+alias 50files="find /home -type f -size +50M -exec ls -lah {} + | awk {'print $9," - ", $5'}"
 
 echo '=========='
 echo 'Disk Usage Overview'
-$diskover
+echo $diskover
 printf '\n\n'
 echo 'Disk Usage Breakdown'
-$diskbreakdown
+echo $diskbreakdown
 printf '\n\n'
 echo 'Files 50M or larger in /home'
-$50Mfileshome
+echo $50files
 echo '=========='
