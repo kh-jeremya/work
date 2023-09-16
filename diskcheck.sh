@@ -1,4 +1,4 @@
-/bin/bash -x
+#!/bin/bash
 
 diskover="/bin/df -a -T -h -t ext4"
 diskbreakdown="/usr/bin/du -shc / 2>&1 | grep -v '^du:' | grep G"
@@ -14,3 +14,4 @@ printf '\n\n'
 echo 'Files 50M or larger in /home'
 $fiftyfiles
 echo '=========='
+exit 0;
