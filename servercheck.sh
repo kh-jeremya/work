@@ -23,7 +23,7 @@ else
 	echo "check php handler manually"
 fi
 
-echo $oomkills | tail -n3
+$oomkills | tail -n3
 
 for file in `ls -tr /var/log/sa/sa*| grep -v sar`
 do
