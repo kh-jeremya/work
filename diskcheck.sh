@@ -6,7 +6,7 @@ alias 50files=`/usr/bin/find /home -type f -size +50M -exec ls -lah {} + | /usr/
 
 echo '=========='
 echo 'Disk Usage Overview'
-$diskover
+echo $diskover
 printf '\n\n'
 echo 'Disk Usage Breakdown'
 $diskbreakdown
