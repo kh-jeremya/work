@@ -32,4 +32,4 @@ do
         sar -r -f $file | awk '/Average:/{printf("Memory Average: %.2f%\n"),(($3-$5-$6)/($2+$3)) * 100 }'
         printf "\n"
 done
-
+exit 0;
