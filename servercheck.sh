@@ -18,7 +18,7 @@ fi
 if [[ -d /usr/local/directadmin/ ]]; then
 	echo `/usr/local/directadmin/custombuild/build options | grep "PHP "`
 elif [[ -d /usr/local/cpanel/ ]]; then
-	echo `/path/to/your/bin/rebuild_phpconf --current`
+	echo `/usr/local/cpanel/bin/rebuild_phpconf --current`
 else
 	echo "check php handler manually"
 fi
