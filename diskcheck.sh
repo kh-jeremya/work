@@ -1,7 +1,7 @@
 /bin/bash
 
-diskover="/bin/df -a -T -h -t ext4"
-diskbreakdown="/usr/bin/du -shc / 2>&1 | grep -v  '^du:' | grep G"
+diskover=`/bin/df -a -T -h -t ext4`
+diskbreakdown="/usr/bin/du -shc / 2>&1 | grep -v '^du:' | grep G"
 fiftyfiles="/usr/bin/find /home -type f -size +50M -exec ls -lah {} + | /usr/bin/awk {'print $9, $5'}"
 
 echo '=========='
