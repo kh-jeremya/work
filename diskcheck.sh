@@ -1,6 +1,6 @@
 #!/bin/sh
 
-diskover='/bin/df -a -T -h -t ext4'
+diskover='/bin/df -a -T -h -t ext4s 2> >(grep -v '/home/virtfs/')'
 diskbreakdown='/usr/bin/du -shc /* --threshold=1G --exclude=/home/virtfs 2> >(grep -v 'cannot access')'
 fiftyfiles='/usr/bin/find /home -not -path "/home/virtfs/*" -type f -size +50M -exec ls -lah {} +'
 
