@@ -1,8 +1,8 @@
 #!/bin/sh
 
 diskover='/bin/df -a -T -h -t ext4'
-diskbreakdown='/usr/bin/du -shc /* --threshold=1G'
-fiftyfiles='/usr/bin/find /home -not -path "./virtfs/*" -type f -size +50M -exec ls -lah {} +'
+diskbreakdown='/usr/bin/du -shc /* --threshold=1G --exclude=/home/virtfs 2> >(grep -v 'cannot access')'
+fiftyfiles='/usr/bin/find /home -not -path "/home/virtfs/*" -type f -size +50M -exec ls -lah {} +'
 
 echo '=========='
 echo 'Disk Usage Overview'
